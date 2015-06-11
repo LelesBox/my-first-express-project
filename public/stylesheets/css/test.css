@@ -1,0 +1,939 @@
+@media (max-width: 768px) {
+    .left {
+        width: 100%;
+        height: 40px;
+    }
+
+    .middle {
+        width: 100%;
+        height: 400px;
+        z-index: 1;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right > div {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-artical p {
+        font-size: 15px;
+        font-weight: 100;
+        line-height: 30px;
+        font-family: "Microsoft YaHei";
+    }
+}
+
+@media (min-width: 768px) {
+    .left {
+        background-color: #161616;
+        width: 3%;
+        position: fixed;
+        height: 100%;
+        /*float: left;*/
+        z-index: 2;
+        text-align: center;
+    }
+
+    .middle {
+        position: fixed;
+        left: 3%;
+        width: 20%;
+        height: 100%;
+        background-color: #161616;
+        float: left;
+        border-right: 1px solid #2f2f2f;
+    }
+
+    .right {
+        position: absolute;
+        width: 77%;
+        left: 23%;
+        height: 100%;
+    }
+
+    .right > div {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .foreword {
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 30px;
+        font-family: "Microsoft YaHei";
+    }
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+html, body, .frame {
+    background-color: #f0f0f0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle div {
+    position: relative;
+    text-align: center;
+    top: 60px;
+}
+
+#avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.username {
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: "Microsoft YaHei";
+}
+
+.intro {
+    margin: 0 10px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+.statistics {
+    margin: 0;
+    padding: 0;
+}
+
+.statistics li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.statistics li a, .statistics li b, .right-nav li a {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: #d9d9d9;
+}
+
+.right-nav {
+    margin-bottom: 0px;
+}
+
+.right-nav li {
+    display: inline-block;
+    margin: 0px 10px -2px 0px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.right-nav .active {
+    border-bottom: 2px solid black;
+}
+
+.right-nav li a {
+    color: black;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+}
+
+.newly-article {
+    list-style: none;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.right-article a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    color: black;
+    font-family: "Microsoft YaHei";
+}
+
+.artical-info a {
+    margin: 0 10px 0 0;
+}
+
+.left ul li {
+    width: 100%;
+    height: 30px;
+    margin: 40px auto;
+    list-style: none;
+    cursor: pointer;
+    /*display: inline-block;*/
+    /*background-color: #161616;*/
+    /*background: url("../../images/img.png");*/
+
+}
+
+.menubar:after {
+    position: absolute;
+    /*display: inline;*/
+    color: #5381ff;
+    width: 100px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    left: 90%;
+    /*top:10px;*/
+    opacity: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.menubar:hover::after {
+    left: 110%;
+    opacity: 1;
+}
+
+.logo-sprite, .logo-coding, .logo-iconfont-bianji, .logo-iconfont-biaoqian, .logo-iconfont-cuowu, .logo-iconfont-denglu, .logo-iconfont-duigou, .logo-iconfont-fasong, .logo-iconfont-github, .logo-iconfont-iconfont94, .logo-iconfont-iconfont95, .logo-iconfont-shanchu, .logo-iconfont-shangchuan, .logo-iconfont-tuichudenglu, .logo-iconfont-tupian, .logo-iconfont-xiangyou, .logo-iconfont-xiangzuo, .logo-iconfont-xinlangweibo, .logo-iconfont-xinwenzhongxin {
+    background-image: url('../../images/logo-sdaca4559e5.png');
+    background-repeat: no-repeat;
+}
+
+.logo-iconfont-bianji {
+    background-position: -43px -512px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-bianji:after {
+    content: "编辑";
+}
+
+.logo-iconfont-biaoqian {
+    background-position: -75px -480px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-biaoqian:after {
+    content: "标签";
+}
+
+.logo-iconfont-cuowu {
+    background-position: -107px -448px;
+}
+
+.logo-iconfont-denglu {
+    background-position: -139px -416px;
+}
+
+.logo-iconfont-duigou {
+    background-position: -171px -384px;
+}
+
+.logo-iconfont-fasong {
+    background-position: -203px -352px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-fasong:after {
+    content: "提交";
+}
+
+.logo-iconfont-github {
+    background-position: -235px -320px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-github:after {
+    content: "Github";
+}
+
+.logo-iconfont-iconfont94 {
+    background-position: -267px -288px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-iconfont94:after {
+    content: "已关闭实时滚动底部";
+}
+
+.logo-iconfont-iconfont95 {
+    background-position: -299px -256px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-iconfont95:after {
+    content: "已开启实时滚动底部"
+}
+
+.logo-iconfont-shanchu {
+    background-position: -331px -224px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-shanchu:after {
+    content: "删除";
+}
+
+.logo-iconfont-shangchuan {
+    background-position: -363px -192px;
+}
+
+.logo-iconfont-tuichudenglu {
+    background-position: -395px -160px;
+}
+
+.logo-iconfont-tupian {
+    background-position: -427px -128px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-tupian:after {
+    content: "添加图片";
+}
+
+.logo-iconfont-xiangyou {
+    background-position: -459px -96px;
+}
+
+.logo-iconfont-xiangzuo {
+    background-position: -488px -64px;
+    zoom: 0.8;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.logo-iconfont-xinlangweibo {
+    background-position: -523px -32px;
+    zoom: 0.8;
+}
+
+.logo-iconfont-xinlangweibo:after {
+    content: "微博";
+}
+
+.logo-iconfont-xinwenzhongxin {
+    background-position: -555px 0;
+    zoom: 0.8;
+}
+
+.logo-iconfont-xinwenzhongxin:after {
+    content: "虎扑新闻";
+}
+
+.transform180 {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#profilePhotoFileUpload {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#writepage {
+    height: 100%;
+    width: 97%;
+    left: 3%;
+    position: absolute;
+    overflow: hidden;
+}
+
+#area {
+    position: fixed;
+    left: 3%;
+    height: 100%;
+    width: 47%;
+    border-width: 0 1px 0 0;
+    resize: none;
+    outline: none
+}
+
+#writepage > div {
+    margin-left: 48.5%;
+    width: 51.5%;
+    height: 100%;
+    /*float:left;*/
+    padding: 10px 15px;
+    overflow: auto;
+}
+
+#content div, #article_content div {
+    /*display: inline-block;*/
+    /*margin:0 auto;*/
+    text-align: center;
+}
+
+/*在初始化的时候ul和li失去了默认样式，在这里要加上，文章显示时正常*/
+#content ul li {
+    margin-left: 15px;
+}
+
+/*在初始化的时候ul和li失去了默认样式，在这里要加上*/
+#article_content ul li {
+    margin-left: 20px;
+}
+
+#content p {
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+}
+
+#article_content {
+    padding: 50px 100px;
+    font-family: "Microsoft YaHei";
+    font-size: 15px;
+    line-height: 25px;
+}
+
+#content blockquote, #article_content blockquote {
+    border-left: 5px solid #161616;
+}
+
+/*虎扑新闻*/
+#hupunba {
+    padding: 10px;
+    text-align: center;
+}
+
+.newslist {
+    list-style: none;
+    padding: 5px;
+    height: 300px;
+    width: 300px;
+    /*border:1px red solid;*/
+    /*float: left;*/
+    display: inline-block;
+}
+
+.card, .img-title {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-title img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.img-title-blur {
+    -webkit-filter: blur(5px); /* Chrome, Opera */
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+/*这里要做渐变*/
+.mask {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    z-index: 99;
+    background-color: #000000;
+    /*opacity: 0.6;*/
+    /*background: -webkit-linear-gradient(red, blue); *//* Safari 5.1 - 6.0 */
+    /*background: -o-linear-gradient(red, blue); *//* Opera 11.1 - 12.0 */
+    /*background: -moz-linear-gradient(red, blue); *//* Firefox 3.6 - 15 */
+    /*background: linear-gradient(red, blue); *//* 标准的语法 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgb(0, 0, 0)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* 标准的语法（必须放在最后） */
+    transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+}
+
+.mask-slideup {
+    height: 100%;
+    top: 0;
+}
+
+.news-title {
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    color: #ffffff;
+    opacity: 1;
+    display: block;
+}
+
+.news-title-hide {
+    display: none;
+}
+
+.news-summary {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 70%;
+    z-index: 99;
+    background-color: transparent;
+    padding: 15px;
+    opacity: 1;
+    font-family: "Microsoft YaHei";
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    transition: all .6s ease;
+    -moz-transition: all .6s ease;
+    -webkit-transition: all .6s ease;
+    -o-transition: all .6s ease;
+}
+
+.news-summary p {
+    cursor: Default;
+}
+
+.summary-slideup {
+    opacity: 1;
+    height: 100%;
+    top: 0px;
+}
+
+.news-summary-title {
+    /*height: 20%;*/
+    text-align: left;
+    padding: 5px 5px 0 5px;
+    margin-bottom: 0px;
+}
+
+.news-summary-content {
+    /*height: 50%;*/
+    font-size: 15px;
+    text-align: left;
+    overflow: hidden
+}
+
+.news-summary-info {
+    /*height: 30%*/
+    margin: 0;
+}
+
+hr {
+    margin: 5px;
+    padding: 0;
+}
+
+.news-summary-info span {
+    font-size: 10px;
+    padding: 0px;
+}
+
+#hupunba {
+    text-align: center;
+    /*position: fixed;*/
+}
+
+/*点击图片弹出内容*/
+#news-content {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 23%;
+    height: 100%;
+    width: 77%;
+    text-align: center;
+    background-color: #000000;
+    opacity: 0.999;
+    z-index: 100;
+}
+
+.artical-content-read div {
+    width: 660px;
+}
+
+.artical-content-read img {
+
+}
+
+.comfirm-yes {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    background-color: red;
+    border-radius: 50px;
+    top: 10px;
+    left: 4%;
+    text-align: center;
+    z-index: 3;
+    display: none;
+}
+
+.comfirm-yes i {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin-top: 14px;
+    background: url("../../images/iconfont-cuowu.png") no-repeat;
+}
+
+.comfirm-no {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    background-color: #008000;
+    border-radius: 50px;
+    top: 100px;
+    left: 4%;
+    text-align: center;
+    z-index: 3;
+    display: none;
+}
+
+.comfirm-no i {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    margin-top: 14px;
+    background: url("../../images/iconfont-duigou.png") no-repeat;
+}
+
+/*我的动态*/
+/*todo头*/
+#todo-header {
+    float: left;
+    height: 80px;
+    width: 50%;
+    border-bottom: 5px orange solid;
+    border-right: 5px red solid;
+}
+
+#timeline-header {
+    float: left;
+    height: 80px;
+    width: 50%;
+    border-bottom: 5px red solid;
+    border-left: 5px #008000 solid;
+}
+
+/***********************timeline 我的动态**************************/
+#timeline {
+    float: left;
+    width: 50%;
+}
+
+#timeline-add {
+    height: 0px;
+    display: none;
+    /*background-color: #008000*/
+}
+
+/*emoji*/
+.timeline-emoji{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+.emoji{
+    position: absolute;
+    left: -373px;
+    height: 400px;
+    width: 400px;
+    background-color: red;
+}
+.emoji:before{
+    content: ".";
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    left: 380px;
+    top: -5px;
+    transform: rotate(45deg);
+    background-color: red;
+}
+/*添加图片*/
+
+.timeline-img {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+}
+
+#timeline-img-input {
+    display: none;
+}
+
+/*todo标签页*/
+#todo {
+    float: left;
+    width: 50%;
+}
+
+#tag-todo, #tag-timeline {
+    height: 100%;
+}
+
+#tag-todo li, #tag-timeline li {
+    float: left;
+    list-style: none;
+    margin: 0 20px;
+    /*width: 100px;*/
+    height: 100%;
+}
+
+#tag-todoing {
+    color: orange;
+    font-family: "Microsoft YaHei";
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#tag-todoed {
+    color: #008000;
+    font-family: "Microsoft YaHei";
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bolder;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+#tag-timeline-title {
+    color: #4d8014;
+    font-family: "Microsoft YaHei";
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bolder;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#tag-todo-add, #tag-timeline-add {
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 35px;
+    line-height: 80px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#add-todo-text {
+    height: 0;
+    background-color: #30ff72;
+    display: none;
+}
+
+#add-todo-textarea, #timeline-add-textarea {
+    width: 100%;
+    height: 100px;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border-width: 0 0px 0 0;
+    resize: none;
+    outline: none
+}
+
+.todo-edit-menu, .timeline-edit-menu {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.todo-edit-menu a, .timeline-edit-menu a {
+    padding: 0 5px;
+}
+
+.input {
+    background-color: #30ff72;
+    margin-left: 10px;
+    color: #000;
+    font-weight: bolder;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+
+.time-picker {
+    float: left;
+    height: 30px;
+}
+
+.time-picker span {
+    font-weight: bolder;
+    margin-left: 10px;
+    font-family: "Microsoft YaHei";
+}
+
+/*doc*/
+.nodedoc {
+    text-align: center;
+    position: relative;
+}
+
+.clearfix {
+    display: inline-table;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.doc-card {
+    float: left;
+    height: 200px;
+    /*width: 200px;*/
+    min-width: 200px;
+    margin: 20px;
+    padding-top: 30px;
+    /*padding:30px 5px 0 5px;*/
+    color: #ffffff;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    transition: padding-top .2s;
+    -moz-transition: padding-top .2s; /* Firefox 4 */
+    -webkit-transition: padding-top .2s; /* Safari 和 Chrome */
+    -o-transition: padding-top .2s; /* Opera */
+}
+
+.doc-card:hover {
+    padding-top: 50px;
+}
+
+.doc-title {
+    font-family: "Microsoft YaHei";
+    font-size: 40px;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.doc-title-line {
+    height: 0px;
+    margin: 15px 100px;
+    background-color: #ffffff;
+    transition: margin .2s ease-out .2s,height .2s ease-out .2s;
+    -moz-transition: margin .2s ease-out .2s,height .2s ease-out .2s; /* Firefox 4 */
+    -webkit-transition: margin .2s ease-out .2s,height .2s ease-out .2s; /* Safari 和 Chrome */
+    -o-transition: margin .2s ease-out .2s,height .2s ease-out .2s; /* Opera */
+}
+
+.doc-card:hover .doc-title-line {
+    height: 1px;
+    margin: 15px 20px;
+}
+
+.doc-add-card {
+    float: left;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    list-style: none;
+    border: 8px dotted #808080;
+}
+
+#filename-input {
+    margin-top: 40px;
+    height: 30px;
+    border: 0px;
+    text-align: center;
+}
+
+#file-input {
+    position: absolute;
+    left: 60px;
+    width: 64px;
+    top: 90px;
+    height: 64px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    cursor: pointer
+}
+
+.file-div {
+    position: absolute;
+    left: 60px;
+    width: 64px;
+    top: 90px;
+    height: 64px;
+    background: url("../../images/iconfont-tianjia.png") no-repeat;
+}
+
+.doc-thumb {
+    height: 100%;
+    width: 100%;
+}
+
+/*************动态框**************/
+.feed-contanier{
+   height:100%;
+   width:100%;
+   background-color:white;
+   margin:20px 0px;
+}
+
+.feed-text{
+    margin:10px;
+    font-family: '微软雅黑','Helvetica Neue',sans-serif,SimHei;
+    font-size:16px;
+}
+.feed-img{
+    /*max-height:200px;*/
+    height: 100%;
+    padding:2px;
+    float:left;
+}
+.feed-time{
+    padding:0;
+    margin:10px 10px;
+}
+.trend-img-preview{
+    height:100%;
+    width:100%;
+}
+.trend-img-preview-contanier{
+    position: relative;
+    height:100px;
+    width:100px;
+    float:left;
+    margin:5px;
+}
+.trend-img-preview-close{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    top:5px;
+    right: 5px; 
+}

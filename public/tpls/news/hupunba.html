@@ -1,0 +1,31 @@
+<div id="hupunba" hupunewsdom-action>
+    <ul>
+        <li class="newslist" ng-repeat="item in news" after-render>
+            <div class="card" ng-click="readDetail(item.url)">
+                <div class="img-title">
+                    <img ng-src="http://localhost:3000/scrapy/img?url={{item.image.image||item.image.videoImage}}"
+                         alt="hupu"/>
+
+                    <div class="mask">
+                    </div>
+                </div>
+                <div class="news-summary">
+                    <p class="news-summary-title">
+                        {{item.title|subStr:0:20}}
+                    </p>
+
+                    <p class="news-summary-info hidden">
+                        <span>{{item.time}}</span>
+                        <span>{{item.readnum}}</span>
+                        <span>评论数：{{item.commentnum}}</span>
+                    </p>
+                    <hr class="hidden">
+                    <p class="news-summary-content hidden">
+                        {{item.content}}
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="frame">
+    <div class="left">
+        <ul>
+            <!--<div id="sendimg">-->
+            <li id="leftarrow" action="menus.pull" class="menubar logo-iconfont-xiangzuo">
+            </li>
+            <li action="menus.edit" class="menubar logo-iconfont-bianji" ng-class="{hide:noPermission}">
+            </li>
+            <li action="menus.addimg" class="menubar logo-iconfont-tupian" ng-class="{hide:noEdit}">
+                <input type="file" id="profilePhotoFileUpload" ng-file-select="uploadLocal($files)">
+            </li>
+            <li action="menus.scrollswitchopen" action-click="actionClick('scrollToggle')" class="menubar logo-iconfont-iconfont95" ng-class="{hide:noEdit}">
+            </li>
+            <li action="menus.send" action-click="actionClick(menus.send)" class="menubar logo-iconfont-fasong" ng-class="{hide:noEdit}">
+            </li>
+            <li action="menus.delete" action-click="actionClick(menus.delete)" class="menubar logo-iconfont-shanchu" ng-class="{hide:noEdit}">
+            </li>
+            <li action="menus.tag" class="menubar logo-iconfont-biaoqian">
+            </li>
+            <li action="menus.news" action-click="actionClick(menus.news)" class="menubar logo-iconfont-xinwenzhongxin">
+            </li>
+            <li action="menus.weibo" class="menubar logo-iconfont-xinlangweibo">
+            </li>
+            <li action="menus.github" class="menubar logo-iconfont-github">
+            </li>
+            <li action="menus.coding" class="menubar logo-coding">
+            </li>
+        </ul>
+    </div>
+    <div class="comfirm-yes">
+        <i></i>
+    </div>
+    <div class="comfirm-no">
+        <i></i>
+    </div>
+    <div ui-view="main">
+    </div>
+</div>

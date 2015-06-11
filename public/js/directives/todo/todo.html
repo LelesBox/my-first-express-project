@@ -1,0 +1,68 @@
+<div class="todo-day">
+    <ul id="todo-ul">
+        <li>
+            <ul class="todo-day-list">
+                <li ng-repeat="tododt in tododata" after-render="todo">
+                    <div class="todo-date">
+                        <span class="date">{{tododt.month}}.{{tododt.day}}</span>
+                    </div>
+                    <div class="todo-card-container">
+                        <div class="todo-daycards">
+                            <ul>
+                                <li class="todo-card" ng-repeat="time in tododt.times" id="{{time.order}}">
+                                    <input type="hidden" class="order" value="{{time.order}}">
+                                    <div class="todo-countdown">
+                                        <span class="todo-time">
+                                            {{time.hour}}:{{time.minute}}:{{time.second}}
+                                        </span>
+                                        <span class="countdown">
+                                            {{countdown[time.order]||"0:0:0:0"}}
+                                        </span>
+                                    </div>
+                                    <div class="todo-text">
+                                        <p>{{time.text}}</p>
+                                        <div class="todo-card-menu">
+                                            <a class="todo-cancel">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                            <a class="todo-delay">
+                                                <i class="fa fa-undo"></i>
+                                            </a>
+                                            <a class="todo-done">
+                                                <i class="fa fa-check"></i>
+                                            </a>
+                                            <input type="hidden" value="{{time.id}},{{time.order}}">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul class="todo-day-done">
+                <li ng-repeat="data in donedata">
+                    <div class="done-todo-card">
+                        <div class="done-time">
+                            <span class="done-todo-date">{{data.date}}</span>
+                            <span class="done-todo-date-time">{{data.time}}</span>
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <div class="done-todo-circle">
+                            <div class="done-todo-inner-circle"></div>
+                        </div>
+                        <div class="done-todo-tri"></div>
+                        <div class="done-content">
+                            <div class="done-todo-detail">
+                                {{data.text}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <div class="done-todo-loadmore" ng-show='ismore' ng-click="loadmore()">点击加载更多</div>
+            </ul>
+        </li>
+    </ul>
+</div>

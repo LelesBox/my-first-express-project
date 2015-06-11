@@ -1,0 +1,312 @@
+/*一天的todo内容*/
+.todo-day {
+    /*background-color: #801222;*/
+    width: 100%;
+    /*position: relative;*/
+    overflow: hidden;
+}
+
+.todo-day-list {
+
+    width: 100%;
+}
+
+.todo-day-list li {
+    list-style: none;
+    /*float: left;*/
+}
+
+#todo-ul {
+    position: relative;
+    width: 200%;
+    left: 0;
+}
+
+#todo-ul > li {
+    list-style: none;
+    width: 50%;
+    float: left;
+}
+
+#todo-ul > li:last-child {
+    /*position: absolute;*/
+    /*left: 300px;*/
+}
+
+#todo-ul > li:first-child {
+    /*position: absolute;*/
+    /*left: 10px;*/
+}
+
+/*第一个和顶部有个间距*/
+.todo-day:first-child {
+    padding-top: 10px;
+}
+
+/*圆圈内表示日期*/
+.todo-date {
+    background-color: #008000;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/*日期显示文字样式，上下垂直居中*/
+.date {
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    font-weight: 700;
+    line-height: 60px;
+    color: #ffffff;
+}
+
+/*todo右边显示卡片内容容器*/
+.todo-card-container {
+    width: 100%;
+    padding-left: 29px;
+}
+
+/*todo显示卡片区域*/
+.todo-daycards {
+    padding-top: 20px;
+    padding-right: 20px;
+    /*padding-bottom: 60px;*/
+    width: 100%;
+    border-left: 2px #008000 solid;
+}
+
+/*单个卡片li元素*/
+.todo-card {
+    list-style: none;
+    border-top: 2px red solid;
+    padding-left: 100px;
+    margin: 0 0 60px 0;
+}
+
+.todo-card:last-child {
+    margin-bottom: 0;
+}
+
+/*倒计时效果*/
+.todo-countdown {
+    height: 50px;
+    margin-top: -50px;
+    /*text-align: center;*/
+    line-height: 50px;
+    font-family: "Microsoft YaHei";
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/*todo文本*/
+.todo-text {
+    margin-top: -2px;
+    /*background-color: #30ff72;*/
+    background-color: red;.
+    color: #fff;
+    /*background-color: orange;*/
+    padding: 20px 20px 10px 20px;
+    font-family: "Microsoft YaHei";
+    font-size: 17px;
+    font-weight: 800;
+    cursor: default;
+}
+
+/*todo时间*/
+.todo-time {
+    display: block;
+    float: left;
+}
+
+/*倒计时*/
+.countdown {
+    margin-left: 30px;
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+    float: left;
+}
+
+.todo-card-menu {
+    text-align: right;
+    position: relative;
+}
+
+.todo-card-menu i {
+    color: #000000;
+}
+
+.todo-cancel {
+
+}
+
+.todo-cancel:before {
+    content: "";
+    color: #fff;
+    width: 30px;
+    height: 20px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+.todo-cancel:hover::before {
+    content: "取消";
+}
+
+.todo-delay:before {
+    content: "";
+    color: #fff;
+    width: 30px;
+    height: 20px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+.todo-delay:hover::before {
+    content: "延迟";
+}
+
+.todo-done:before {
+    content: "";
+    color: #fff;
+    width: 0px;
+    height: 0px;
+    font-weight: bold;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+
+.todo-done:hover::before {
+    content: "完成";
+}
+
+/*完成todo的样式*/
+
+.done-todo-card {
+    /*display:table*/
+    position: relative;
+}
+
+.done-todo-card:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.todo-day-done {
+    position: relative;
+    list-style: none;
+}
+
+/*日期*/
+.done-time {
+    height: 40px;
+    line-height: 40px;
+    /*position: absolute;*/
+    margin-top: 30px;
+    margin-right: -10px;
+    /*background-color: red;*/
+    width: 30%;
+    float: left;
+    /*border-right: 1px rgba(0,0,0,.1) solid;*/
+}
+
+.done-todo-circle {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-top: 40px;
+    /*background-color: red;*/
+    /*border:1px red solid;*/
+    border-radius: 10px;
+    /*padding: 0 5px;*/
+    float: left;
+    text-align: center;
+    z-index: 99;
+}
+
+.done-todo-inner-circle {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    margin-top: 4px;
+    border-radius: 6px;
+    background-color: #30ff72;
+}
+
+.done-todo-tri {
+    width: 0;
+    height: 0;
+    margin-top: 40px;
+    float: left;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #bc8f65;
+    border-bottom: 10px solid transparent;
+}
+
+/*日期字体样式*/
+.done-todo-date {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: "Microsoft YaHei";
+    display: inline-block;
+}
+
+.done-todo-date-time {
+    font-weight: bold;
+}
+
+.done-content {
+    position: relative;
+    width: 60%;
+    float: left;
+    margin-left: -30px;
+    padding: 20px 0 40px 28px;
+    border-left: 1px rgba(0, 0, 0, .1) solid;
+    z-index: 9;
+}
+
+.done-todo-detail {
+    padding: 20px;
+    background-color: #bc8f65;
+    border-radius: 20px;
+    font-family: "Microsoft YaHei";
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: #ffffff;
+}
+
+.done-todo-loadmore{
+    height:30px;
+    width:200px;
+    margin:0 auto;
+    text-align:center;
+    font-size:16px;
+    font-family:'YaHei';
+    font-weight:bold;
+    cursor: pointer;
+}
+
+/*清除浮动*/
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-table;
+}
+
+.clearfix {
+    display: block;
+}

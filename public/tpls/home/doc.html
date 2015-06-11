@@ -1,0 +1,15 @@
+<div class="nodedoc">
+    <ul class="doc-ul clearfix">
+        <li class="doc-card" ng-repeat="doc in nodedocs" ng-style="{background:doc.color}"
+            ng-click="opendoc(doc.objectId)">
+            <span class="doc-title">{{doc.filename}}</span>
+            <div class="doc-title-line"></div>
+        </li>
+        <li class="doc-add-card" ng-show="authorize">
+            <input type="text" id="filename-input" placeholder="请先输入文档名字" ng-model="filename">
+            <div class="file-div">
+            </div>
+            <input type="file" id="file-input" ng-file-select="uploadLocal($files)">
+        </li>
+    </ul>
+</div>

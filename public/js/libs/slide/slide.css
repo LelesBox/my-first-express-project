@@ -1,0 +1,80 @@
+.slide{
+    margin: 0;
+    padding: 0;
+	height:100%;
+	width:100%;
+	overflow: hidden;
+	position:relative
+}
+.slidelist {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	/*动态*/
+	position: relative;
+	left: 0;
+	transition: all .3s ease-out;
+}
+.slidelist-card {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+.slide-banner-btn {
+	display: inline-block;
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	margin-top: -25px;
+	height: 50px;
+	width: 30px;
+	cursor: pointer;
+	background-color: black;
+	opacity: 0;
+	transition: all .5s ease-out;
+}
+.slide-btn-prev {
+	left: 10px
+}
+.slide-btn-next {
+	right: 10px
+}
+.slide-btn-prev i {
+	display: block;
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+	background: url("./iconfont-chevron15.png") no-repeat
+}
+.slide-btn-next i {
+	display: block;
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+	background: url("./iconfont-chevron15.png") no-repeat;
+	transform: rotate(180deg)
+}
+.slide-dots {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: absolute;
+	bottom: 20px;
+	left: 50%
+}
+.slide-dot {
+	list-style: none;
+	height: 8px;
+	width: 8px;
+	margin: 0 5px;
+	float: left;
+	border-radius: 4px;
+	cursor: pointer;
+	background: gray;
+	opacity: 0.8;
+}
+.slide-dot:first-child {
+	background: white;
+}

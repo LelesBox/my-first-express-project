@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<!--<link rel="stylesheet" type="text/css" href="src/emoji.css">-->
+		<!--<link rel="stylesheet" type="text/css" href="src/emoji.sprite.css">-->
+	</head>
+	<body>
+		<li id="asd" style="position:absolute;left:100px;top:100px;width:10px;height:30px;background-color:green"></li>
+		<script type="text/javascript" src="dist/emoji.min.js"></script>
+		<script type="text/javascript">
+			emoji.createEmoji("asd",function(classname){
+				console.log("callback:"+classname);
+			});
+		</script>
+	</body>
+
+</html>
