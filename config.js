@@ -24,7 +24,7 @@ var config={
     password:'123',
 
     db:'mongodb://127.0.0.1/myblog',
-    //db:'mongodb://leebox:519261612@ds045097.mongolab.com:45097/leebox',
+    // db:'mongodb://leebox:519261612@ds045097.mongolab.com:45097/leebox',
     crypto:"md5",
     passkey:"my_blog"
 }

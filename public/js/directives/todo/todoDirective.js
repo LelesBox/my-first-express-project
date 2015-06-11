@@ -45,7 +45,7 @@ define([], function() {
                             doneOffset = 10;
                         }
                         //缓存
-                        utilitiesService.cache["todo"].done = data;
+                        utilitiesService.cache["todo"]["done"] = data;
                     }
                 })
 
