@@ -12,7 +12,7 @@ define([], function() {
                 //检查缓存
                 if (utilitiesService.cache["todo"]) {
                     scope.tododata = utilitiesService.cache["todo"].data.data;
-                    scope.donedata = utilitiesService.cache["todo"].done;
+                    scope.donedata = utilitiesService.cache["donetodo"];
                     scope.order = utilitiesService.cache["todo"].data.order;
                 }
                 //数据存放顺序，其实跟顺序无关，只是用于保存每个卡片的id
@@ -45,7 +45,7 @@ define([], function() {
                             doneOffset = 10;
                         }
                         //缓存
-                        utilitiesService.cache["todo"]["done"] = data;
+                        utilitiesService.cache["donetodo"] = data;
                     }
                 })
 

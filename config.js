@@ -23,13 +23,8 @@ var config={
     username:'leebox',
     password:'123',
 
-<<<<<<< HEAD
-    db:'mongodb://127.0.0.1/myblog',
-    // db:'mongodb://leebox:519261612@ds045097.mongolab.com:45097/leebox',
-=======
     // db:'mongodb://127.0.0.1/myblog',
     db:'mongodb://leebox:519261612@ds045097.mongolab.com:45097/leebox',
->>>>>>> 88157085d5ed6546c2de93ad7032eb5ff6252f3b
     crypto:"md5",
     passkey:"my_blog"
 }
